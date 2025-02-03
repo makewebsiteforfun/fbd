@@ -1,0 +1,65 @@
+body {
+    background-image: url('./ads/top-draft-page.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    min-height: 100vh; /* Ensures full height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.floating-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .floating-container {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.floating-form {
+    width: 90%;
+    max-width: 400px;
+    min-height: 60vh; /* Ensure it's big enough */
+    padding: 20px;
+}
+
+@media (max-width: 1024px) {
+    body {
+        background-size: contain;
+    }
+    .floating-container {
+        flex-direction: column;
+    }
+    .floating-form {
+        width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    .floating-form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .floating-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .floating-form {
+        width: 95%;
+        padding: 15px;
+    }
+}
